@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com">
+</script>
 
     <style>
         /* ══════════════════════════════════════════
@@ -758,7 +759,368 @@
             .dm-hero-terminal-section { height: 100%; display: flex; flex-direction: column; justify-content: center; }
         }
 
-    </style>
+    
+        .dm-process-main-title {
+            color: #061A2F !important;
+            font-size: 1.55rem !important;
+            font-weight: 900 !important;
+            line-height: 1.15 !important;
+            letter-spacing: -0.035em !important;
+            margin-bottom: 10px !important;
+        }
+        .dm-process-main-subtitle {
+            color: #334155 !important;
+            font-size: .82rem !important;
+            line-height: 1.65 !important;
+            font-weight: 500 !important;
+        }
+        @media (min-width: 768px) {
+            .dm-process-main-title {
+                font-size: 2.1rem !important;
+            }
+            .dm-process-main-subtitle {
+                font-size: .95rem !important;
+            }
+        }
+
+
+        .dm-process-title-force { color:#020617 !important; }
+
+        /* ── Pricing cards estilo SaaS/IA ── */
+        .dm-pricing-section {
+            margin-top: 22px;
+        }
+        .dm-pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin-top: 14px;
+        }
+        .dm-pricing-card {
+            position: relative;
+            background: #FFFFFF;
+            border: 1px solid #CBD5E1;
+            border-radius: 18px;
+            padding: 18px 16px;
+            box-shadow: 0 8px 24px rgba(11,31,58,.08);
+            color: #0B1F3A;
+        }
+        .dm-pricing-card.featured {
+            border: 2px solid rgba(0,194,203,.85);
+            box-shadow: 0 14px 34px rgba(0,194,203,.20);
+            background: linear-gradient(180deg, #FFFFFF 0%, #F0FEFF 100%);
+        }
+        .dm-pricing-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #0B1F3A;
+            color: #20D9E0;
+            border-radius: 999px;
+            padding: 5px 10px;
+            font-size: .58rem;
+            font-weight: 900;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .dm-pricing-title {
+            font-size: .95rem;
+            font-weight: 900;
+            color: #0B1F3A;
+            line-height: 1.25;
+            margin-bottom: 5px;
+        }
+        .dm-pricing-sub {
+            font-size: .68rem;
+            color: #475569;
+            line-height: 1.55;
+            min-height: 34px;
+            margin-bottom: 12px;
+        }
+        .dm-pricing-price {
+            font-size: 2rem;
+            font-weight: 950;
+            letter-spacing: -.04em;
+            color: #006B73;
+            margin: 0 0 8px;
+        }
+        .dm-pricing-price span {
+            font-size: .8rem;
+            color: #64748B;
+            font-weight: 700;
+            letter-spacing: 0;
+        }
+        .dm-pricing-list {
+            list-style: none;
+            padding: 0;
+            margin: 12px 0 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .dm-pricing-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: .68rem;
+            line-height: 1.45;
+            color: #334155;
+        }
+        .dm-pricing-list li::before {
+            content: "✓";
+            flex-shrink: 0;
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,194,203,.12);
+            color: #006B73;
+            font-size: .66rem;
+            font-weight: 900;
+            margin-top: 1px;
+        }
+        .dm-pricing-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: auto;
+        }
+        .dm-pricing-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 11px 8px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: .66rem;
+            font-weight: 900;
+            letter-spacing: .02em;
+            transition: all .22s ease;
+            border: 1px solid #CBD5E1;
+            text-align: center;
+        }
+        .dm-pricing-btn.ec {
+            background: #FFFFFF;
+            color: #0B1F3A;
+        }
+        .dm-pricing-btn.world {
+            background: #EEF7F8;
+            color: #0B1F3A;
+        }
+        .featured .dm-pricing-btn.ec {
+            background: linear-gradient(135deg, var(--teal-500), var(--teal-400));
+            border-color: rgba(0,194,203,.75);
+            box-shadow: 0 6px 20px rgba(0,194,203,.30);
+        }
+        .dm-pricing-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(11,31,58,.12);
+            border-color: rgba(0,194,203,.45);
+        }
+        .dm-pricing-note {
+            margin-top: 12px;
+            font-size: .66rem;
+            line-height: 1.55;
+            color: #64748B;
+            text-align: center;
+        }
+        @media (min-width: 900px) {
+            .dm-pricing-grid {
+                grid-template-columns: repeat(3, 1fr);
+                align-items: stretch;
+            }
+            .dm-pricing-card {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+
+        .dm-process-section {
+            background: var(--gray-50) !important;
+            color: var(--blue-900);
+            padding: 34px 20px 38px;
+            border-top: 1px solid rgba(0,0,0,.06);
+            border-bottom: 1px solid rgba(0,0,0,.06);
+        }
+
+        .dm-section-pill-spaced {
+            margin-bottom: 18px !important;
+            padding: 8px 14px !important;
+        }
+        .dm-process-section h2,
+        .dm-agenda-section h2 {
+            margin-top: 4px !important;
+        }
+        .dm-process-section > div > div:first-child,
+        .dm-agenda-inner {
+            padding-top: 4px;
+        }
+
+
+        .dm-big-section-title {
+            display:block;
+            margin-top:8px !important;
+            margin-bottom:18px !important;
+            line-height:1.16 !important;
+        }
+
+        .dm-sector-title-inline {
+            display:inline-flex;
+            align-items:center;
+            gap:9px;
+            font-size:.80rem;
+            font-weight:950;
+            letter-spacing:.09em;
+            text-transform:uppercase;
+            color:#004E56;
+            line-height:1;
+            background:#E9FCFD;
+            border:1.5px solid rgba(0,194,203,.42);
+            border-radius:999px;
+            padding:8px 12px;
+            margin-bottom:12px;
+            box-shadow:0 3px 10px rgba(0,194,203,.10);
+        }
+        .dm-sector-title-inline svg {
+            width:1.28em;
+            height:1.28em;
+            stroke:#004E56;
+            stroke-width:2.15;
+            flex-shrink:0;
+        }
+
+
+
+        /* ── Testimonios estables: 3 tarjetas, sin carrusel ── */
+        .dm-testimonials-grid {
+            display: grid !important;
+            grid-template-columns: 1fr !important;
+            gap: 16px !important;
+            margin-top: 28px !important;
+            overflow: visible !important;
+            padding-bottom: 0 !important;
+            scroll-snap-type: none !important;
+        }
+        .dm-testimonials-grid::-webkit-scrollbar {
+            display: none !important;
+        }
+        .dm-testimonials-grid .dm-t-card {
+            min-width: 0 !important;
+            max-width: none !important;
+            width: 100% !important;
+            scroll-snap-align: unset !important;
+        }
+        .dm-carousel-arrow,
+        .dm-t-arrow {
+            display: none !important;
+        }
+        @media (min-width: 768px) {
+            .dm-testimonials-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 24px !important;
+            }
+        }
+
+
+        /* ── QA móvil final DatamentorIA ── */
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        img, iframe, video {
+            max-width: 100%;
+        }
+        .dm-contact-val,
+        .dm-footer-copy,
+        .dm-t-quote,
+        .dm-pricing-list li {
+            overflow-wrap: anywhere;
+            word-break: normal;
+        }
+
+        @media (max-width: 767px) {
+            main {
+                width: 100% !important;
+                max-width: 440px !important;
+            }
+
+            .dm-process-section {
+                padding: 30px 16px 34px !important;
+            }
+
+            .dm-process-section h2,
+            .dm-agenda-section h2 {
+                font-size: 1.55rem !important;
+                line-height: 1.18 !important;
+                letter-spacing: .004em !important;
+            }
+
+            .dm-process-section h3,
+            .dm-agenda-section h3 {
+                font-size: .95rem !important;
+                line-height: 1.35 !important;
+            }
+
+            .dm-pricing-grid {
+                grid-template-columns: 1fr !important;
+                gap: 13px !important;
+            }
+
+            .dm-pricing-card {
+                padding: 16px 14px !important;
+            }
+
+            .dm-pricing-actions {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+                gap: 8px !important;
+            }
+
+            .dm-pricing-btn {
+                min-width: 0 !important;
+                white-space: normal !important;
+                font-size: .62rem !important;
+                line-height: 1.25 !important;
+                padding: 10px 6px !important;
+            }
+
+            .dm-sector-title-inline {
+                font-size: .72rem !important;
+                letter-spacing: .07em !important;
+                padding: 7px 10px !important;
+                max-width: 100%;
+            }
+
+            .dm-testimonials-grid {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                gap: 14px !important;
+                overflow: visible !important;
+                padding-bottom: 0 !important;
+            }
+
+            .dm-testimonials-grid .dm-t-card {
+                width: 100% !important;
+                min-width: 0 !important;
+                max-width: none !important;
+            }
+
+            .dm-data-row {
+                grid-template-columns: 1fr !important;
+            }
+
+            .dm-contact-items {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                gap: 10px !important;
+            }
+        }
+
+</style>
     <meta name="referrer" content="strict-origin-when-cross-origin">
 </head> 
 
@@ -896,7 +1258,7 @@
                     </span>
                     <div>
                         <div class="dm-data-label">Fecha</div>
-                        <div class="dm-data-value">Jueves, 11 Jun</div>
+                        <div class="dm-data-value">Jueves, 2 Jul</div>
                     </div>
                 </div>
                 <div class="dm-data-item">
@@ -911,12 +1273,17 @@
             </div>
 
             <!-- Botón WhatsApp -->
-            <a href="https://wa.me/593999064934?text=Hola%2C%20quiero%20reservar%20mi%20cupo%20para%20la%20clase%20pr%C3%A1ctica%20del%20Jueves%2011%20de%20Junio%20a%20las%2019%3A30"
+            <a href="https://forms.gle/w4mbyhg9f5Udq5TT6"
                target="_blank" rel="noopener noreferrer"
                class="dm-btn-whatsapp" style="display:flex; align-items:center; justify-content:center; gap:8px;">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-                RESERVAR MI CUPO GRATUITO EN WHATSAPP
+                RESERVAR CUPO Y RECIBIR MATERIALES
             </a>
+
+            <p style="text-align:center; font-size:.64rem; color:var(--gray-400); line-height:1.55; margin-top:10px;">
+                Después del registro, únete al grupo oficial de WhatsApp para recibir el enlace de acceso, recordatorios, bonus y materiales.
+            </p>
+
 
         </div>
       </div><!-- /md:max-w-2xl S3 -->
@@ -924,103 +1291,178 @@
 
 
     <!-- ══════════════════════════════════════════
-         5. VITRINA DE RECURSOS — ROBUSTEZ MULTI-SECTOR
+         5. PROCESOS DIGITALES CON IA — NUEVA VITRINA COMERCIAL
          ══════════════════════════════════════════ -->
 
-    <section id="dm-s4" style="padding: 24px 20px 28px;">
-      <div class="md:max-w-3xl md:mx-auto">
+    <section id="dm-s4" class="dm-process-section">
 
-        <!-- Encabezado vitrina -->
-        <div style="margin-bottom:16px;">
-            <div class="dm-vitrina-label">
-                <span class="dm-section-label" style="display:inline-flex; align-items:center; gap:6px;">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#00C2CB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-                    Ecosistema DatamentorIA
-                </span>
+      <div class="md:max-w-6xl md:mx-auto">
+
+        <!-- Encabezado procesos digitales -->
+        <div style="text-align:center; margin-bottom:26px;">
+            <div class="dm-section-pill-spaced" style="display:inline-flex; align-items:center; gap:8px; background:#E9FCFD; border:1px solid rgba(0,194,203,.28); color:#006B73; font-size:.68rem; font-weight:900; letter-spacing:.14em; text-transform:uppercase; padding:6px 12px; border-radius:999px; margin-bottom:12px;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#006B73" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                Recursos DatamentorIA
             </div>
-            <h3 style="font-size:.96rem; font-weight:700; color:var(--white); margin-bottom:6px;">Recursos para ambos sectores</h3>
-            <p style="font-size:.68rem; color:var(--gray-400); line-height:1.55;">
-                Herramientas especializadas para el sector público <span style="color:var(--teal-400); font-weight:600;">y</span> privado. Toca cada recurso para ver su descripción.
+            <h2 style="font-size:1.95rem; font-weight:950; color:#020617; line-height:1.16; letter-spacing:.012em; margin:8px 0 18px; padding-top:4px;">
+                Procesos digitales con IA
+            </h2>
+            <h3 style="font-size:1.05rem; font-weight:850; color:#0B1F3A; line-height:1.25; letter-spacing:-.025em; margin:0 0 16px;">
+                No compres prompts sueltos. Trabaja con un proceso completo.
+            </h3>
+            <p style="font-size:.82rem; color:#334155; line-height:1.7; max-width:780px; margin:0 auto; font-weight:500;">
+                Elige tu sector, revisa los planes y compra directamente. El mensaje de WhatsApp llega con el producto y plan elegido.
             </p>
         </div>
 
-        <!-- Lista de acordeones -->
-        <div style="display:flex; flex-direction:column; gap:8px;">
-
-            <!-- Acordeón 1: Banco de Prompts -->
-            <div class="dm-accordion-item">
-                <button class="dm-accordion-btn" onclick="toggleAccordion('acc1')">
-                    <div class="dm-accordion-btn-inner">
-                        <span class="dm-icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal-400)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-                        </span>
-                        <span class="dm-accordion-title">BANCO COMPLETO DE PROMPTS AVANZADOS POR PROCESOS</span>
+        
+            <div style="background:#FFFFFF; border:1px solid #CBD5E1; border-radius:24px; padding:20px; box-shadow:0 10px 30px rgba(11,31,58,.08); margin-bottom:22px;">
+                <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px; margin-bottom:12px;">
+                    <div>
+                        <div class="dm-sector-title-inline"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M3 21h18"/>
+    <path d="M5 21V9l5 3V9l5 3V7h4v14"/>
+    <path d="M8 17h2"/>
+    <path d="M13 17h2"/>
+    <path d="M18 17h1"/>
+</svg><span>Sector privado</span></div>
+                        <h3 style="font-size:1.05rem; font-weight:900; color:#0B1F3A; line-height:1.25; margin:0;">Pack Análisis Comercial y Financiero con IA</h3>
                     </div>
-                    <span id="icon-acc1" class="dm-accordion-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-                    </span>
-                </button>
-                <div id="acc1" class="dm-accordion-content">
-                    <p class="dm-accordion-desc">
-                        Más de 50 estructuras optimizadas para auditorías presupuestarias, conciliaciones masivas y análisis comercial avanzado. Listo para pegar directamente en Claude o ChatGPT sin configurar nada desde cero.
-                    </p>
-                    <a href="URL_MARKETPLACE_PRODUCTO_1" target="_blank" rel="noopener noreferrer"
-                        class="dm-btn-acquire" style="margin-bottom:14px;">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0B1F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-right:6px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>ADQUIRIR ESTE RECURSO EN EL MARKETPLACE
-                    </a>
+                    <div style="font-size:.64rem; font-weight:800; color:#006B73; background:#E9FCFD; border:1px solid rgba(0,194,203,.24); padding:6px 10px; border-radius:999px;">Excel · Power BI · Google Sheets</div>
+                </div>
+                <ul style="list-style:none; padding:0; margin:0 0 12px; display:grid; gap:7px;">
+                    <li>✓ Proceso guiado para ventas, ingresos, gastos, indicadores y reporte gerencial.</li><li>✓ Pensado para análisis comercial, financiero y preguntas de gerencia.</li><li>✓ Incluye recursos para convertir hallazgos en presentación ejecutiva con IA.</li>
+                </ul>
+                <p style="font-size:.68rem; color:#64748B; line-height:1.55; margin:0 0 14px;">Ideal para negocios, consultores, emprendedores, analistas y equipos que necesitan convertir datos comerciales en decisiones.</p>
+
+                <div class="dm-pricing-section">
+                    <div class="dm-pricing-grid">
+                        <div class="dm-pricing-card">
+                            <div class="dm-pricing-title">Individual</div>
+                            <div class="dm-pricing-sub">Para quien solo necesita una herramienta.</div>
+                            <div class="dm-pricing-price">$13 <span>USD</span></div>
+                            <ul class="dm-pricing-list">
+                                <li>Una versión a elegir: Excel, Power BI o Google Sheets.</li>
+                                <li>Guía y prompts del proceso correspondiente.</li>
+                                <li>Recursos de validación y aplicación práctica.</li>
+                            </ul>
+                            <div class="dm-pricing-actions">
+                                <a href="https://wa.me/593999064934?text=Hola%2C%20quiero%20comprar%20en%20Ecuador%20el%20recurso%20DatamentorIA%3A%20Pack%20An%C3%A1lisis%20Comercial%20y%20Financiero%20con%20IA.%20Plan%20elegido%3A%20Individual%20%28%2413%29.%20Deseo%20pagar%20y%20recibir%20una%20versi%C3%B3n%20a%20elegir." target="_blank" rel="noopener noreferrer" class="dm-pricing-btn ec">🇪🇨 🛒 Ecuador</a>
+                                <a href="URL_MARKETPLACE_PACK_PRIVADO_INDIVIDUAL" target="_blank" rel="noopener noreferrer" class="dm-pricing-btn world">🌎 🛒 Internacional</a>
+                            </div>
+                        </div>
+
+                        <div class="dm-pricing-card">
+                            <div class="dm-pricing-title">Pack completo</div>
+                            <div class="dm-pricing-sub">Para tener flexibilidad en las tres herramientas.</div>
+                            <div class="dm-pricing-price">$37 <span>USD</span></div>
+                            <ul class="dm-pricing-list">
+                                <li>Incluye todo lo del plan Individual.</li>
+                                <li>Incluye las tres versiones: Excel, Power BI y Google Sheets.</li>
+                                <li>Incluye bonus de presentación con IA y template visual para dashboard.</li>
+                            </ul>
+                            <div class="dm-pricing-actions">
+                                <a href="https://wa.me/593999064934?text=Hola%2C%20quiero%20comprar%20en%20Ecuador%20el%20recurso%20DatamentorIA%3A%20Pack%20An%C3%A1lisis%20Comercial%20y%20Financiero%20con%20IA.%20Plan%20elegido%3A%20Pack%20completo%20%28%2437%29.%20Deseo%20pagar%20y%20recibir%20el%20pack%20completo." target="_blank" rel="noopener noreferrer" class="dm-pricing-btn ec">🇪🇨 🛒 Ecuador</a>
+                                <a href="URL_MARKETPLACE_PACK_PRIVADO_COMPLETO" target="_blank" rel="noopener noreferrer" class="dm-pricing-btn world">🌎 🛒 Internacional</a>
+                            </div>
+                        </div>
+
+                        <div class="dm-pricing-card featured">
+                            <div class="dm-pricing-badge">⭐ Mejor valor</div>
+                            <div class="dm-pricing-title">Pack asistido</div>
+                            <div class="dm-pricing-sub">Para empezar con acompañamiento y evitar perder tiempo.</div>
+                            <div class="dm-pricing-price">$47 <span>USD</span></div>
+                            <ul class="dm-pricing-list">
+                                <li>Incluye todo lo del Pack completo.</li>
+                                <li>Incluye sesión en vivo guiada de 20 minutos.</li>
+                                <li>Te ayuda a elegir la ruta correcta y aplicar el recurso sin improvisar.</li>
+                            </ul>
+                            <div class="dm-pricing-actions">
+                                <a href="https://wa.me/593999064934?text=Hola%2C%20quiero%20comprar%20en%20Ecuador%20el%20recurso%20DatamentorIA%3A%20Pack%20An%C3%A1lisis%20Comercial%20y%20Financiero%20con%20IA.%20Plan%20elegido%3A%20Pack%20asistido%20%28%2447%29.%20Incluye%20pack%20completo%20%2B%20sesi%C3%B3n%20en%20vivo%20guiada%20de%2020%20minutos.%20Deseo%20pagar%20y%20agendar." target="_blank" rel="noopener noreferrer" class="dm-pricing-btn ec">🇪🇨 🛒 Ecuador</a>
+                                <a href="URL_MARKETPLACE_PACK_PRIVADO_ASISTIDO" target="_blank" rel="noopener noreferrer" class="dm-pricing-btn world">🌎 🛒 Internacional</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dm-pricing-note">Elige el plan antes de escribir. El mensaje llega con producto, sector y precio seleccionado.</div>
                 </div>
             </div>
 
-            <!-- Acordeón 2: Dashboards Público -->
-            <div class="dm-accordion-item">
-                <button class="dm-accordion-btn" onclick="toggleAccordion('acc2')">
-                    <div class="dm-accordion-btn-inner">
-                        <span class="dm-icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal-400)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21V11h6v10"/></svg>
-                        </span>
-                        <span class="dm-accordion-title">DASHBOARDS DE CONTROL PRESUPUESTARIO <span style="color:var(--teal-400);">(SECTOR PÚBLICO)</span></span>
+        
+            <div style="background:#FFFFFF; border:1px solid #CBD5E1; border-radius:24px; padding:20px; box-shadow:0 10px 30px rgba(11,31,58,.08); margin-bottom:22px;">
+                <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px; margin-bottom:12px;">
+                    <div>
+                        <div class="dm-sector-title-inline"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M3 21h18"/>
+    <path d="M5 21V8l7-4 7 4v13"/>
+    <path d="M9 21v-6h6v6"/>
+    <path d="M9 10h.01"/>
+    <path d="M12 10h.01"/>
+    <path d="M15 10h.01"/>
+</svg><span>Sector público</span></div>
+                        <h3 style="font-size:1.05rem; font-weight:900; color:#0B1F3A; line-height:1.25; margin:0;">Pack Análisis Presupuestario y Financiero Público con IA</h3>
                     </div>
-                    <span id="icon-acc2" class="dm-accordion-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-                    </span>
-                </button>
-                <div id="acc2" class="dm-accordion-content">
-                    <p class="dm-accordion-desc">
-                        Estructura de tableros de control listos para la gestión de reformas y ejecución del gasto. Incluye matrices lógicas integradas para el Clasificador por Objeto del Gasto (COG) con seguimiento automático de desviaciones presupuestarias.
-                    </p>
-                    <a href="URL_MARKETPLACE_PRODUCTO_2" target="_blank" rel="noopener noreferrer"
-                        class="dm-btn-acquire" style="margin-bottom:14px;">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0B1F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-right:6px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>ADQUIRIR ESTE RECURSO EN EL MARKETPLACE
-                    </a>
+                    <div style="font-size:.64rem; font-weight:800; color:#006B73; background:#E9FCFD; border:1px solid rgba(0,194,203,.24); padding:6px 10px; border-radius:999px;">Excel principal · Power BI y Sheets complementarios</div>
+                </div>
+                <ul style="list-style:none; padding:0; margin:0 0 12px; display:grid; gap:7px;">
+                    <li>✓ Proceso guiado para gastos, partidas presupuestarias, ejecución y trazabilidad.</li><li>✓ Incluye informe técnico, informe institucional positivo y manual de proceso con BPMN.</li><li>✓ Excel es la ruta principal por realidad operativa, licencias y seguridad informática.</li>
+                </ul>
+                <p style="font-size:.68rem; color:#64748B; line-height:1.55; margin:0 0 14px;">Ideal para servidores públicos, analistas financieros, áreas administrativas y equipos técnicos que trabajan con información institucional.</p>
+
+                <div class="dm-pricing-section">
+                    <div class="dm-pricing-grid">
+                        <div class="dm-pricing-card">
+                            <div class="dm-pricing-title">Individual</div>
+                            <div class="dm-pricing-sub">Para quien solo necesita una herramienta.</div>
+                            <div class="dm-pricing-price">$13 <span>USD</span></div>
+                            <ul class="dm-pricing-list">
+                                <li>Una versión a elegir: Excel, Power BI o Google Sheets.</li>
+                                <li>Guía y prompts del proceso correspondiente.</li>
+                                <li>Recursos de validación y aplicación práctica.</li>
+                            </ul>
+                            <div class="dm-pricing-actions">
+                                <a href="https://wa.me/593999064934?text=Hola%2C%20quiero%20comprar%20en%20Ecuador%20el%20recurso%20DatamentorIA%3A%20Pack%20An%C3%A1lisis%20Presupuestario%20y%20Financiero%20P%C3%BAblico%20con%20IA.%20Plan%20elegido%3A%20Individual%20%28%2413%29.%20Deseo%20pagar%20y%20recibir%20una%20versi%C3%B3n%20a%20elegir." target="_blank" rel="noopener noreferrer" class="dm-pricing-btn ec">🇪🇨 🛒 Ecuador</a>
+                                <a href="URL_MARKETPLACE_PACK_PUBLICO_INDIVIDUAL" target="_blank" rel="noopener noreferrer" class="dm-pricing-btn world">🌎 🛒 Internacional</a>
+                            </div>
+                        </div>
+
+                        <div class="dm-pricing-card">
+                            <div class="dm-pricing-title">Pack completo</div>
+                            <div class="dm-pricing-sub">Para tener flexibilidad en las tres herramientas.</div>
+                            <div class="dm-pricing-price">$37 <span>USD</span></div>
+                            <ul class="dm-pricing-list">
+                                <li>Incluye todo lo del plan Individual.</li>
+                                <li>Incluye las tres versiones: Excel, Power BI y Google Sheets.</li>
+                                <li>Incluye bonus de presentación con IA y template visual para dashboard.</li>
+                            </ul>
+                            <div class="dm-pricing-actions">
+                                <a href="https://wa.me/593999064934?text=Hola%2C%20quiero%20comprar%20en%20Ecuador%20el%20recurso%20DatamentorIA%3A%20Pack%20An%C3%A1lisis%20Presupuestario%20y%20Financiero%20P%C3%BAblico%20con%20IA.%20Plan%20elegido%3A%20Pack%20completo%20%28%2437%29.%20Deseo%20pagar%20y%20recibir%20el%20pack%20completo." target="_blank" rel="noopener noreferrer" class="dm-pricing-btn ec">🇪🇨 🛒 Ecuador</a>
+                                <a href="URL_MARKETPLACE_PACK_PUBLICO_COMPLETO" target="_blank" rel="noopener noreferrer" class="dm-pricing-btn world">🌎 🛒 Internacional</a>
+                            </div>
+                        </div>
+
+                        <div class="dm-pricing-card featured">
+                            <div class="dm-pricing-badge">⭐ Mejor valor</div>
+                            <div class="dm-pricing-title">Pack asistido</div>
+                            <div class="dm-pricing-sub">Para empezar con acompañamiento y evitar perder tiempo.</div>
+                            <div class="dm-pricing-price">$47 <span>USD</span></div>
+                            <ul class="dm-pricing-list">
+                                <li>Incluye todo lo del Pack completo.</li>
+                                <li>Incluye sesión en vivo guiada de 20 minutos.</li>
+                                <li>Te ayuda a elegir la ruta correcta y aplicar el recurso sin improvisar.</li>
+                            </ul>
+                            <div class="dm-pricing-actions">
+                                <a href="https://wa.me/593999064934?text=Hola%2C%20quiero%20comprar%20en%20Ecuador%20el%20recurso%20DatamentorIA%3A%20Pack%20An%C3%A1lisis%20Presupuestario%20y%20Financiero%20P%C3%BAblico%20con%20IA.%20Plan%20elegido%3A%20Pack%20asistido%20%28%2447%29.%20Incluye%20pack%20completo%20%2B%20sesi%C3%B3n%20en%20vivo%20guiada%20de%2020%20minutos.%20Deseo%20pagar%20y%20agendar." target="_blank" rel="noopener noreferrer" class="dm-pricing-btn ec">🇪🇨 🛒 Ecuador</a>
+                                <a href="URL_MARKETPLACE_PACK_PUBLICO_ASISTIDO" target="_blank" rel="noopener noreferrer" class="dm-pricing-btn world">🌎 🛒 Internacional</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dm-pricing-note">Elige el plan antes de escribir. El mensaje llega con producto, sector y precio seleccionado.</div>
                 </div>
             </div>
 
-            <!-- Acordeón 3: Dashboards Privado -->
-            <div class="dm-accordion-item">
-                <button class="dm-accordion-btn" onclick="toggleAccordion('acc3')">
-                    <div class="dm-accordion-btn-inner">
-                        <span class="dm-icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal-400)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
-                        </span>
-                        <span class="dm-accordion-title">DASHBOARDS DE CONTROL DE VENTAS <span style="color:var(--teal-400);">(SECTOR PRIVADO)</span></span>
-                    </div>
-                    <span id="icon-acc3" class="dm-accordion-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-                    </span>
-                </button>
-                <div id="acc3" class="dm-accordion-content">
-                    <p class="dm-accordion-desc">
-                        Tableros comerciales dinámicos diseñados para conectarse directamente a tus sábanas de facturación y reportes de retail. Cálculo automático de márgenes, KPIs comerciales y alertas por canal de distribución.
-                    </p>
-                    <a href="URL_MARKETPLACE_PRODUCTO_3" target="_blank" rel="noopener noreferrer"
-                        class="dm-btn-acquire" style="margin-bottom:14px;">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0B1F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-right:6px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>ADQUIRIR ESTE RECURSO EN EL MARKETPLACE
-                    </a>
-                </div>
-            </div>
 
-        </div>
-      </div><!-- /md:max-w-3xl S4 -->
+      </div><!-- /md:max-w-6xl S4 -->
+
     </section>
 
 
@@ -1054,16 +1496,17 @@
             </p>
 
             <!-- Tarjetas -->
-            <div class="dm-testimonials-grid">
-
-                <!-- Cristina L. — 5.0 estrellas -->
-                <div class="dm-t-card">
+            <div class="dm-testimonials-carousel-fixed">
+                <div class="dm-testimonials-grid" id="dm-testimonials-carousel">
+                <div class="dm-t-card" data-testimonial="cristina">
                     <div class="dm-t-stars">
+
                         <svg viewBox="0 0 24 24"><polygon class="dm-star-full" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                         <svg viewBox="0 0 24 24"><polygon class="dm-star-full" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                         <svg viewBox="0 0 24 24"><polygon class="dm-star-full" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                         <svg viewBox="0 0 24 24"><polygon class="dm-star-full" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                         <svg viewBox="0 0 24 24"><polygon class="dm-star-full" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+
                         <span class="dm-t-rating">5.0</span>
                     </div>
                     <p class="dm-t-quote">"La mentoría me permitió estructurar mejor la información financiera y transformar los datos en entregables ejecutivos, como un dashboard y una revista económica institucional."</p>
@@ -1075,15 +1518,35 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Andrés M. — 4.5 estrellas -->
-                <div class="dm-t-card">
+                <div class="dm-t-card" data-testimonial="juan">
                     <div class="dm-t-stars">
+
+                        <svg viewBox="0 0 24 24"><polygon class="dm-star-full" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon class="dm-star-full" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon class="dm-star-full" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon class="dm-star-full" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon class="dm-star-full" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+
+                        <span class="dm-t-rating">5.0</span>
+                    </div>
+                    <p class="dm-t-quote">"Pensaba que por mi edad se me iba a complicar aprender a analizar datos, pero con la metodología RAI lo entendí de manera fácil y rápida."</p>
+                    <div class="dm-t-author">
+                        <div class="dm-t-avatar">JC</div>
+                        <div>
+                            <div class="dm-t-name">Juan Carlos — 50 años</div>
+                            <div class="dm-t-role">Profesional administrativo · Metodología RAI</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dm-t-card" data-testimonial="andres">
+                    <div class="dm-t-stars">
+
                         <svg viewBox="0 0 24 24"><polygon class="dm-star-full" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                         <svg viewBox="0 0 24 24"><polygon class="dm-star-full" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                         <svg viewBox="0 0 24 24"><polygon class="dm-star-full" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                         <svg viewBox="0 0 24 24"><polygon class="dm-star-full" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                         <svg viewBox="0 0 24 24"><polygon class="dm-star-half" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+
                         <span class="dm-t-rating">4.5</span>
                     </div>
                     <p class="dm-t-quote">"El enfoque metodológico me ayudó a ordenar mejor la información, entender los indicadores y presentar resultados con mayor claridad."</p>
@@ -1095,28 +1558,8 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Valentina R. — 5.0 estrellas -->
-                <div class="dm-t-card">
-                    <div class="dm-t-stars">
-                        <svg viewBox="0 0 24 24"><polygon class="dm-star-full" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg viewBox="0 0 24 24"><polygon class="dm-star-full" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg viewBox="0 0 24 24"><polygon class="dm-star-full" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg viewBox="0 0 24 24"><polygon class="dm-star-full" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg viewBox="0 0 24 24"><polygon class="dm-star-full" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <span class="dm-t-rating">5.0</span>
-                    </div>
-                    <p class="dm-t-quote">"Aprendí a analizar datos con una lógica más clara y a usar la IA como apoyo para estructurar ideas, no solo para copiar respuestas."</p>
-                    <div class="dm-t-author">
-                        <div class="dm-t-avatar">VR</div>
-                        <div>
-                            <div class="dm-t-name">Valentina R. — 20 años</div>
-                            <div class="dm-t-role">Estudiante universitaria · Online vía Zoom</div>
-                        </div>
-                    </div>
                 </div>
-
-            </div><!-- /grid -->
+</div>
         </div><!-- /z-index wrapper -->
     </section>
 
@@ -1151,9 +1594,17 @@
 
                 <!-- IMAGEN — ocupa todo el ancho en móvil sin recortar -->
                 <div class="md:flex-shrink-0 md:w-52" style="margin-bottom:18px;">
-                    <img src="founder.png"
-                         alt="Abel Torres Cabrera — Fundador de DatamentorIA, Economista y Magíster en Administración Pública"
-                         style="width:100%; height:auto; display:block; border-radius:16px; border:2px solid rgba(0,194,203,.35);">
+                    <div style="position:relative; width:100%; border-radius:16px; overflow:hidden; border:2px solid rgba(0,194,203,.35); background:linear-gradient(135deg,#0B1F3A,#1A3560);">
+                        <img src="founder.png"
+                             alt="Abel Torres Cabrera — Fundador de DatamentorIA, Economista y Magíster en Administración Pública"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                             style="width:100%; height:auto; display:block;">
+                        <div style="display:none; min-height:240px; align-items:center; justify-content:center; flex-direction:column; color:#FFFFFF; text-align:center; padding:26px 18px;">
+                            <div style="width:82px; height:82px; border-radius:50%; background:rgba(0,194,203,.16); border:2px solid rgba(0,194,203,.42); display:flex; align-items:center; justify-content:center; font-size:1.35rem; font-weight:900; margin-bottom:12px;">AT</div>
+                            <div style="font-size:.84rem; font-weight:800; line-height:1.3;">Abel Torres Cabrera</div>
+                            <div style="font-size:.68rem; color:#20D9E0; font-weight:600; margin-top:4px;">Fundador de DatamentorIA</div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- TEXTO — sobre fondo oscuro sólido, debajo en móvil / al lado en desktop -->
@@ -1212,17 +1663,21 @@
         <div class="dm-agenda-glow"></div>
         <div class="dm-agenda-inner md:max-w-xl md:mx-auto">
 
-            <span class="dm-section-label" style="display:inline-flex; align-items:center; gap:6px;">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00C2CB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <div class="dm-section-pill-spaced" style="display:inline-flex; align-items:center; gap:8px; background:#E9FCFD; border:1px solid rgba(0,194,203,.28); color:#006B73; font-size:.68rem; font-weight:900; letter-spacing:.14em; text-transform:uppercase; padding:6px 12px; border-radius:999px; margin-bottom:12px;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#006B73" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                 Mentoría personalizada
-            </span>
+            </div>
 
-            <div class="dm-agenda-divider"></div>
+            <h2 style="font-size:1.95rem; font-weight:950; color:#020617; line-height:1.16; letter-spacing:.012em; margin:8px 0 18px; padding-top:4px;">
+                Trabaja directamente con un experto
+            </h2>
 
-            <h2 class="dm-agenda-title">Trabaja directamente con<br>un experto en analítica estratégica</h2>
+            <h3 style="font-size:1.05rem; font-weight:850; color:#0B1F3A; line-height:1.25; letter-spacing:-.025em; margin:0 0 16px;">
+                Sesiones guiadas para aplicar análisis, IA y criterio profesional.
+            </h3>
 
-            <p class="dm-agenda-sub">
-                Sesiones individuales diseñadas para acompañar decisiones complejas, proyectos de análisis y desarrollo de criterio profesional. Sin recetas generales: diagnóstico y solución a tu medida.
+            <p style="font-size:.82rem; color:#334155; line-height:1.7; max-width:720px; margin:0 auto 20px; font-weight:500;">
+                Acompañamiento individual para ordenar datos, revisar decisiones, aplicar metodología y avanzar con entregables concretos, sin recetas generales.
             </p>
 
             <div class="dm-agenda-features">
